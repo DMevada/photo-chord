@@ -1,5 +1,11 @@
 package edu.scu;
 
+/**
+ * @author Raghav Bhandari
+ * @author Krishna Kandhani
+ * @author Abhiman Kolte
+ * @author Dhruv Mevada
+ */
 public class Logger
 {
     public static void log(String s)

@@ -1,6 +1,7 @@
 package edu.scu;
 
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
 /**
@@ -9,20 +10,23 @@ import java.net.UnknownHostException;
  * @author Abhiman Kolte
  * @author Dhruv Mevada
  */
+public class Chord
+{
+    private static String port = "";
+    private static String ipAddressPort = "";
+    private static Node node;
+    private static InetSocketAddress contactNode;
 
-public class Chord {
-
-    private InetAddress _contact;
-    private int port;
-
-    private void parseArguments(String[] args)
+    private int parseArguments(String[] args)
     {
+        int returnValue = 0;
+
         //list nodes in chord ring
         if(args.length == 1)
         {
             if(args[0].equalsIgnoreCase("list"))
             {
-                //display list of existing nodes in chord ring
+                returnValue = 1;
             }
 
             else
@@ -36,18 +40,7 @@ public class Chord {
         {
             if(args[0].equalsIgnoreCase("create"))
             {
-                port = Integer.parseInt(args[1]);
-
-                if(port > 65536 || port < 1000)
-                {
-                    Logger.log("Port must be between 1001 and 65536, cannot create chord ring");
-                    printHelp();
-                }
-
-                else
-                {
-                    //create chord ring
-                }
+                returnValue = 2;
             }
 
             else
@@ -61,25 +54,7 @@ public class Chord {
         {
             if(args[0].equalsIgnoreCase("join"))
             {
-                port = Integer.parseInt(args[1]);
-
-                if(port > 65536 || port < 1000)
-                {
-                    Logger.log("Port must be between 1001 and 65536, cannot create chord ring");
-                    printHelp();
-                }
-
-                String ipPort = args[2];
-
-                if(ipPort.contains(":"))
-                {
-                    //join existing chord ring
-                }
-
-                else
-                {
-                    printHelp();
-                }
+                returnValue = 3;
             }
 
             else
@@ -90,9 +65,10 @@ public class Chord {
 
         else
         {
-
             printHelp();
         }
+
+        return returnValue;
     }
 
     private void printHelp()
@@ -105,7 +81,7 @@ public class Chord {
         Logger.log("    3) java join <port> <ip:port>");
     }
 
-    private String getOwnIp()
+    private static String getOwnIp()
     {
         try
         {
@@ -122,12 +98,44 @@ public class Chord {
     public static void main(String[] args) throws UnknownHostException
     {
 	    Chord chord = new Chord();
-	    chord.parseArguments(args);
+	    int value  = chord.parseArguments(args);
 
-	    String ipAddressPort = chord.getOwnIp() + ":" + chord.port;
-	    Logger.log(ipAddressPort);
+        if(value == 1)
+        {
+            //list chord ring
+        }
 
+        //create chord ring
+        else if(value == 2)
+        {
 
+            port = args[1];
+            String ipPort = getOwnIp() + ":" + port;
+
+            node = new Node(Util.createSocketAddress(ipPort));
+            contactNode = node.getSelfAddress();
+        }
+
+        //join existing chord ring
+        else if(value == 3)
+        {
+            port = args[1];
+            ipAddressPort = args[2];
+
+            node = new Node(Util.createSocketAddress(getOwnIp() + ":" + port));
+            contactNode = Util.createSocketAddress(ipAddressPort);
+
+            if(contactNode == null)
+            {
+                Logger.log("Address not resolved, cannot join ring, exiting.");
+                System.exit(0);
+            }
+        }
+
+        else
+        {
+            Logger.log("Could not parse arguments, exiting");
+            System.exit(0);
+        }
     }
-
 }
