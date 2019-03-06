@@ -1,4 +1,4 @@
-package edu.scu;
+package edu.scu.Utils;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -9,7 +9,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
-import static edu.scu.Constants.sizeOfFingerTable;
+import static edu.scu.Utils.Constants.sizeOfFingerTable;
 
 /**
  * @author Raghav Bhandari

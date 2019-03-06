@@ -1,5 +1,7 @@
 package edu.scu;
 
+import edu.scu.Utils.Util;
+
 import java.net.InetSocketAddress;
 
 public class PredecessorCheck extends Thread {

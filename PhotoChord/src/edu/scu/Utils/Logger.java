@@ -1,4 +1,4 @@
-package edu.scu;
+package edu.scu.Utils;
 
 /**
  * @author Raghav Bhandari

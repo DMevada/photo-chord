@@ -1,9 +1,14 @@
 package edu.scu;
 
+import edu.scu.Threads.FixFingerThread;
+import edu.scu.Threads.ListenerThread;
+import edu.scu.Threads.StabilizeThread;
+import edu.scu.Utils.Util;
+
 import java.net.InetSocketAddress;
 import java.util.HashMap;
 
-import static edu.scu.Constants.sizeOfFingerTable;
+import static edu.scu.Utils.Constants.sizeOfFingerTable;
 
 /**
  * @author Raghav Bhandari

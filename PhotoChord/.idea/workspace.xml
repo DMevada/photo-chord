@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5760ecf-3c4e-4c19-a4ee-0a7e0d2f2de4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/Chord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Chord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/edu/scu/Chord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/edu/scu/Chord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/edu/scu/FixFingerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/edu/scu/FixFingerThread.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="266">
+              <caret line="129" column="13" lean-forward="true" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/scu/FixFingerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+            <state relative-caret-position="345">
+              <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -92,8 +93,8 @@
         <option value="$PROJECT_DIR$/src/edu/scu/PredecessorCheck.java" />
         <option value="$PROJECT_DIR$/src/edu/scu/StabilizeThread.java" />
         <option value="$PROJECT_DIR$/src/edu/scu/Util.java" />
-        <option value="$PROJECT_DIR$/src/edu/scu/Chord.java" />
         <option value="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" />
+        <option value="$PROJECT_DIR$/src/edu/scu/Chord.java" />
       </list>
     </option>
   </component>
@@ -156,7 +157,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="edu.scu.Chord" />
       <module name="untitled104" />
-      <option name="PROGRAM_PARAMETERS" value="create 8001" />
+      <option name="PROGRAM_PARAMETERS" value="join 8001 172.21.118.187:9000" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -187,12 +188,12 @@
       <workItem from="1551836874053" duration="37000" />
       <workItem from="1551836922711" duration="488000" />
       <workItem from="1551837746327" duration="279000" />
-      <workItem from="1551838155999" duration="3821000" />
+      <workItem from="1551838155999" duration="6556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5707000" />
+    <option name="totallyTimeSpent" value="8442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
@@ -281,13 +282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -308,8 +302,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/FixFingerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        <state relative-caret-position="345">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="129" column="13" lean-forward="true" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
         </state>
       </provider>
     </entry>
