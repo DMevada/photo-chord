@@ -42,7 +42,7 @@ public class TalkerThread implements Runnable{
             input.close();
         } catch (IOException e) {
             throw new RuntimeException(
-                    "Cannot talk.\nServer port: "+local.getSelfAddress().getPort()+"; Talker port: "+talkSocket.getPort(), e);
+                    "Cannot talk.\nServer port: "+local.getAddress().getPort()+"; Talker port: "+talkSocket.getPort(), e);
         }
     }
 
