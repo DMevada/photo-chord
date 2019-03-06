@@ -9,20 +9,18 @@ import java.net.Socket;
  * Listener thread that keeps listening to a port and asks talker thread to process
  * when a request is accepted.
  *
- *  @author Raghav Bhandari
- *  @author Krishna Kandhani
- *  @author Abhiman Kolte
- *  @author Dhruv Mevada
- *
+ * @author Raghav Bhandari
+ * @author Krishna Kandhani
+ * @author Abhiman Kolte
+ * @author Dhruv Mevada
  */
 
-public class ListenerThread extends Thread
-{
+public class ListenerThread extends Thread {
     private Node local;
     private ServerSocket serverSocket;
     private boolean alive;
 
-    public ListenerThread (Node n) {
+    public ListenerThread(Node n) {
         local = n;
         alive = true;
         InetSocketAddress localAddress = local.getAddress();
@@ -32,7 +30,7 @@ public class ListenerThread extends Thread
         try {
             serverSocket = new ServerSocket(port);
         } catch (IOException e) {
-            throw new RuntimeException("\nCannot open listener port "+port+". Now exit.\n", e);
+            throw new RuntimeException("\nCannot open listener port " + port + ". Now exit.\n", e);
         }
     }
 

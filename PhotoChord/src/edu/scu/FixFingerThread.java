@@ -4,20 +4,20 @@ import java.net.InetSocketAddress;
 import java.util.Random;
 
 /**
- * Fixfingers thread that periodically access a random entry in finger table 
+ * Fixfingers thread that periodically access a random entry in finger table
  * and fix it.
- *  @author Raghav Bhandari
- *  @author Krishna Kandhani
- *  @author Abhiman Kolte
- *  @author Dhruv Mevada
  *
+ * @author Raghav Bhandari
+ * @author Krishna Kandhani
+ * @author Abhiman Kolte
+ * @author Dhruv Mevada
  */
 
-public class FixFingerThread extends Thread{
+public class FixFingerThread extends Thread {
 
-    private Node local;
     Random random;
     boolean alive;
+    private Node local;
 
     public FixFingerThread(Node node) {
         local = node;

@@ -6,10 +6,10 @@ import java.net.InetSocketAddress;
  * Stabilize thread that periodically asks successor for its predecessor
  * and determine if current node should update or delete its successor.
  *
- *  @author Raghav Bhandari
- *  @author Krishna Kandhani
- *  @author Abhiman Kolte
- *  @author Dhruv Mevada
+ * @author Raghav Bhandari
+ * @author Krishna Kandhani
+ * @author Abhiman Kolte
+ * @author Dhruv Mevada
  */
 
 public class StabilizeThread extends Thread {
@@ -44,9 +44,9 @@ public class StabilizeThread extends Thread {
                 else if (!x.equals(successor)) {
                     long local_id = Util.hashSocketAddress(local.getAddress());
                     long successor_relative_id = Util.computeRelativeId(Util.hashSocketAddress(successor), local_id);
-                    long x_relative_id = Util.computeRelativeId(Util.hashSocketAddress(x),local_id);
-                    if (x_relative_id>0 && x_relative_id < successor_relative_id) {
-                        local.updateFingers(1,x);
+                    long x_relative_id = Util.computeRelativeId(Util.hashSocketAddress(x), local_id);
+                    if (x_relative_id > 0 && x_relative_id < successor_relative_id) {
+                        local.updateFingers(1, x);
                     }
                 }
 

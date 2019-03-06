@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5760ecf-3c4e-4c19-a4ee-0a7e0d2f2de4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/edu/scu/Chord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Chord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/scu/ListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/ListenerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/scu/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/scu/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/scu/StabilizeThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/StabilizeThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/scu/TalkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/TalkerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/scu/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-28">
-              <caret line="105" column="29" lean-forward="true" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -28,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/scu/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="127" column="88" selection-start-line="127" selection-start-column="88" selection-end-line="127" selection-end-column="88" />
+            <state relative-caret-position="336">
+              <caret line="135" column="9" lean-forward="true" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -163,12 +170,12 @@
       <workItem from="1551836874053" duration="37000" />
       <workItem from="1551836922711" duration="488000" />
       <workItem from="1551837746327" duration="279000" />
-      <workItem from="1551838155999" duration="3142000" />
+      <workItem from="1551838155999" duration="3277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5028000" />
+    <option name="totallyTimeSpent" value="5163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
@@ -267,14 +274,14 @@
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-28">
-          <caret line="105" column="29" lean-forward="true" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="127" column="88" selection-start-line="127" selection-start-column="88" selection-end-line="127" selection-end-column="88" />
+        <state relative-caret-position="336">
+          <caret line="135" column="9" lean-forward="true" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
         </state>
       </provider>
     </entry>
