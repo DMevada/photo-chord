@@ -32,7 +32,7 @@ public class FixFingerThread extends Thread {
             if(i == 0) {
                 i += 1;
             }
-            Logger.log("Checking node #" + i);
+//            Logger.log("Checking node #" + i);
             InetSocketAddress ithfinger = local.find_successor(Util.ithStart(local.getId(), i));
             local.updateFingers(i, ithfinger);
             try {

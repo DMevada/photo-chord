@@ -81,6 +81,7 @@ public class Chord {
 
             if (userCommand.equalsIgnoreCase("info")) {
                 //print node info
+                node.printDataStructure();
             } else if (userCommand.equalsIgnoreCase("quit")) {
                 //stop threads
                 Logger.log("");
