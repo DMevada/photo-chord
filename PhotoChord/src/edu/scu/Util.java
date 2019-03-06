@@ -32,7 +32,7 @@ public class Util
         //initialize power of two table
         powerOfTwo = new HashMap<Integer, Long>();
         long base = 1;
-        for (int i = 0; i <= 32; i++) {
+        for (int i = 0; i <= 5; i++) {
             powerOfTwo.put(i, base);
             base *= 2;
         }
@@ -77,7 +77,6 @@ public class Util
         try {
             md = MessageDigest.getInstance("SHA-1");
         } catch (NoSuchAlgorithmException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
