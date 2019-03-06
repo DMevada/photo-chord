@@ -25,7 +25,7 @@ public class ListenerThread extends Thread
     public ListenerThread (Node n) {
         local = n;
         alive = true;
-        InetSocketAddress localAddress = local.getSelfAddress();
+        InetSocketAddress localAddress = local.getAddress();
         int port = localAddress.getPort();
 
         //open server/listener socket

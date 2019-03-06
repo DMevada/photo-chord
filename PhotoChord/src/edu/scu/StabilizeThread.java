@@ -26,11 +26,11 @@ public class StabilizeThread extends Thread {
     public void run() {
         while (alive) {
             InetSocketAddress successor = local.getSuccessor();
-            if (successor == null || successor.equals(local.getSelfAddress())) {
+            if (successor == null || successor.equals(local.getAddress())) {
                 local.updateFingers(-3, null); //fill
             }
             successor = local.getSuccessor();
-            if (successor != null && !successor.equals(local.getSelfAddress())) {
+            if (successor != null && !successor.equals(local.getAddress())) {
 
                 // try to get my successor's predecessor
                 InetSocketAddress x = Util.requestAddress(successor, "YOURPRE");
@@ -42,7 +42,7 @@ public class StabilizeThread extends Thread {
 
                 // else if successor's predecessor is not itself
                 else if (!x.equals(successor)) {
-                    long local_id = Util.hashSocketAddress(local.getSelfAddress());
+                    long local_id = Util.hashSocketAddress(local.getAddress());
                     long successor_relative_id = Util.computeRelativeId(Util.hashSocketAddress(successor), local_id);
                     long x_relative_id = Util.computeRelativeId(Util.hashSocketAddress(x),local_id);
                     if (x_relative_id>0 && x_relative_id < successor_relative_id) {

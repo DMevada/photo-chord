@@ -114,7 +114,7 @@ public class Chord
             String ipPort = getOwnIp() + ":" + port;
 
             node = new Node(Util.createSocketAddress(ipPort));
-            contactNode = node.getSelfAddress();
+            contactNode = node.getAddress();
         }
 
         //join existing chord ring

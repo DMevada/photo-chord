@@ -16,7 +16,7 @@ public class PredecessorCheck extends Thread {
         while (_alive) {
             InetSocketAddress predecessor = _local.getPredecessor();
             if (predecessor != null) {
-                String response = Helper.sendRequest(predecessor, "KEEP");
+                String response = Util.sendRequest(predecessor, "KEEP");
                 if (response == null || !response.equals("ALIVE")) {
                     _local.clearPredecessor();
                 }
