@@ -16,6 +16,7 @@ public class Chord {
     private static String ipAddressPort = "";
     private static Node node;
     private static InetSocketAddress contactNode;
+    private Util util = new Util();
 
     private static String getOwnIp() {
         try {

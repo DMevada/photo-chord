@@ -4,12 +4,6 @@
     <list default="true" id="f5760ecf-3c4e-4c19-a4ee-0a7e0d2f2de4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/edu/scu/Chord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Chord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/ListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/ListenerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/StabilizeThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/StabilizeThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/TalkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/TalkerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,19 +18,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/scu/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="268" selection-start-line="268" selection-end-line="268" />
+              <folding>
+                <element signature="e#13035#13036#0" expanded="true" />
+                <element signature="e#13065#13066#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-28">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="120">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/scu/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/edu/scu/Util.java">
+        <entry file="file://$PROJECT_DIR$/src/edu/scu/FixFingerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="135" column="9" lean-forward="true" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+            <state relative-caret-position="176">
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -75,8 +91,9 @@
         <option value="$PROJECT_DIR$/src/edu/scu/ListenerThread.java" />
         <option value="$PROJECT_DIR$/src/edu/scu/PredecessorCheck.java" />
         <option value="$PROJECT_DIR$/src/edu/scu/StabilizeThread.java" />
-        <option value="$PROJECT_DIR$/src/edu/scu/Chord.java" />
         <option value="$PROJECT_DIR$/src/edu/scu/Util.java" />
+        <option value="$PROJECT_DIR$/src/edu/scu/Chord.java" />
+        <option value="$PROJECT_DIR$/src/edu/scu/FixFingerThread.java" />
       </list>
     </option>
   </component>
@@ -139,7 +156,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="edu.scu.Chord" />
       <module name="untitled104" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="create 8001" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -170,25 +187,25 @@
       <workItem from="1551836874053" duration="37000" />
       <workItem from="1551836922711" duration="488000" />
       <workItem from="1551837746327" duration="279000" />
-      <workItem from="1551838155999" duration="3277000" />
+      <workItem from="1551838155999" duration="3821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5163000" />
+    <option name="totallyTimeSpent" value="5707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25751072" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25751072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -208,31 +225,24 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/scu/FixFingerThread.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Helper.java" />
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/scu/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <element signature="e#12765#12766#0" expanded="true" />
-            <element signature="e#12801#12802#0" expanded="true" />
-            <element signature="e#12948#12949#0" expanded="true" />
-            <element signature="e#12981#12982#0" expanded="true" />
-            <element signature="e#13082#13083#0" expanded="true" />
-            <element signature="e#13112#13113#0" expanded="true" />
-            <element signature="e#13157#13158#0" expanded="true" />
-            <element signature="e#13192#13193#0" expanded="true" />
-            <element signature="e#13241#13242#0" expanded="true" />
-            <element signature="e#13275#13276#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -273,15 +283,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="135" column="9" lean-forward="true" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+        <state relative-caret-position="131">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/scu/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="268" selection-start-line="268" selection-end-line="268" />
+          <folding>
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13065#13066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/scu/FixFingerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
         </state>
       </provider>
     </entry>
