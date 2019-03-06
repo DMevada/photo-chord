@@ -3,6 +3,7 @@ package edu.scu;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 /**
  * @author Raghav Bhandari
@@ -97,8 +98,8 @@ public class Chord
 
     public static void main(String[] args) throws UnknownHostException
     {
-	    Chord chord = new Chord();
-	    int value  = chord.parseArguments(args);
+        Chord chord = new Chord();
+        int value  = chord.parseArguments(args);
 
         if(value == 1)
         {
@@ -136,6 +137,38 @@ public class Chord
         {
             Logger.log("Could not parse arguments, exiting");
             System.exit(0);
+        }
+
+        boolean joinedSuccessfully =  node.join(contactNode);
+
+        if(!joinedSuccessfully)
+        {
+            Logger.log("Could not connect with node, exiting.");
+            System.exit(0);
+        }
+
+        Logger.log("Joining the chord ring, with local ip: " + getOwnIp());
+
+        Scanner in = new Scanner(System.in);
+        while(true)
+        {
+            Logger.log("Select from the options below: ");
+            Logger.log("1) Info");
+            Logger.log("2) Quit");
+
+            String userCommand = in.next();
+
+            if(userCommand.equalsIgnoreCase("info"))
+            {
+                //print node info
+            }
+
+            else if(userCommand.equalsIgnoreCase("quit"))
+            {
+                //stop threads
+                Logger.log("");
+                System.exit(0);
+            }
         }
     }
 }
