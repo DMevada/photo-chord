@@ -13,6 +13,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
+import static edu.scu.Constants.sizeOfFingerTable;
+
 /**
  *
  * @author Raghav Bhandari
@@ -32,7 +34,7 @@ public class Util
         //initialize power of two table
         powerOfTwo = new HashMap<Integer, Long>();
         long base = 1;
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i <= sizeOfFingerTable; i++) {
             powerOfTwo.put(i, base);
             base *= 2;
         }
@@ -93,7 +95,7 @@ public class Util
             byte[] compressed = new byte[4];
             for (int j = 0; j < 4; j++) {
                 byte temp = result[j];
-                for (int k = 1; k < 5; k++) {
+                for (int k = 1; k < sizeOfFingerTable; k++) {
                     temp = (byte) (temp ^ result[j+k]);
                 }
                 compressed[j] = temp;
