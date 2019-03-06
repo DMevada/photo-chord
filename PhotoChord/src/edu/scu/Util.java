@@ -41,9 +41,9 @@ public class Util
     }
 
     /**
-     * Compute a socket address' 32 bit identifier
+     * Compute a socket address' sizeOfFingerTable bit identifier
      * @param addr: socket address
-     * @return 32-bit identifier in long type
+     * @return sizeOfFingerTable-bit identifier in long type
      */
     public static long hashSocketAddress (InetSocketAddress addr) {
         int i = addr.hashCode();
@@ -51,9 +51,9 @@ public class Util
     }
 
     /**
-     * Compute a string's 32 bit identifier
+     * Compute a string's sizeOfFingerTable bit identifier
      * @param s: string
-     * @return 32-bit identifier in long type
+     * @return sizeOfFingerTable-bit identifier in long type
      */
     public static long hashString (String s) {
         int i = s.hashCode();
@@ -61,13 +61,13 @@ public class Util
     }
 
     /**
-     * Compute a 32 bit integer's identifier
+     * Compute a sizeOfFingerTable bit integer's identifier
      * @param i: integer
-     * @return 32-bit identifier in long type
+     * @return sizeOfFingerTable-bit identifier in long type
      */
     private static long hashHashCode (int i) {
 
-        //32 bit regular hash code -> byte[4]
+        //sizeOfFingerTable bit regular hash code -> byte[4]
         byte[] hashbytes = new byte[4];
         hashbytes[0] = (byte) (i >> 24);
         hashbytes[1] = (byte) (i >> 16);
@@ -112,7 +112,7 @@ public class Util
     public static long computeRelativeId (long universal, long local) {
         long ret = universal - local;
         if (ret < 0) {
-            ret += powerOfTwo.get(32);
+            ret += powerOfTwo.get(sizeOfFingerTable);
         }
         return ret;
     }
@@ -125,7 +125,7 @@ public class Util
      */
     public static String hexIdAndPosition (InetSocketAddress addr) {
         long hash = hashSocketAddress(addr);
-        return (longTo8DigitHex(hash)+" ("+hash*100/Util.getPowerOfTwo(32)+"%)");
+        return (longTo8DigitHex(hash)+" ("+hash*100/Util.getPowerOfTwo(sizeOfFingerTable)+"%)");
     }
 
 
@@ -142,7 +142,7 @@ public class Util
 
 
     public static long ithStart (long nodeid, int i) {
-        return (nodeid + powerOfTwo.get(i-1)) % powerOfTwo.get(32);
+        return (nodeid + powerOfTwo.get(i-1)) % powerOfTwo.get(sizeOfFingerTable);
     }
 
     /**
