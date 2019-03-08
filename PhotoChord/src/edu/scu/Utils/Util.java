@@ -18,13 +18,12 @@ import static edu.scu.Utils.Constants.sizeOfFingerTable;
  * @author Dhruv Mevada
  */
 
-public class Util {
+public class Util
+{
     private static HashMap<Integer, Long> powerOfTwo = null;
 
-    /**
-     * Constructor
-     */
-    public Util() {
+    public Util()
+    {
         //initialize power of two table
         powerOfTwo = new HashMap<Integer, Long>();
         long base = 1;
@@ -164,10 +163,12 @@ public class Util {
      * (2) response is null (typically cannot send request)
      * (3) fail to create address from reponse
      */
-    public static InetSocketAddress requestAddress(InetSocketAddress server, String req) {
+    public static InetSocketAddress requestAddress(InetSocketAddress server, String req)
+    {
 
         // invalid input, return null
-        if (server == null || req == null) {
+        if (server == null || req == null)
+        {
             return null;
         }
 
@@ -206,7 +207,7 @@ public class Util {
             PrintStream output = new PrintStream(talkSocket.getOutputStream());
             output.println(req);
         } catch (IOException e) {
-            //System.out.println("\nCannot send request to "+server.toString()+"\nRequest is: "+req+"\n");
+            //Logger.log("\nCannot send request to "+server.toString()+"\nRequest is: "+req+"\n");
             return null;
         }
 
@@ -222,7 +223,7 @@ public class Util {
         try {
             input = talkSocket.getInputStream();
         } catch (IOException e) {
-            System.out.println("Cannot get input stream from " + server.toString() + "\nRequest is: " + req + "\n");
+            Logger.log("Cannot get input stream from " + server.toString() + "\nRequest is: " + req + "\n");
         }
         String response = Util.inputStreamToString(input);
 
@@ -237,16 +238,14 @@ public class Util {
     }
 
     /**
-     * Create InetSocketAddress using ip address and port number
+     * Creates an InetSocketAddress using ip address and port number.
      *
-     * @return created InetSocketAddress object;
-     * return null if:
-     * (1) not valid input
-     * (2) cannot find split input into ip and port strings
-     * (3) fail to parse ip address.
+     * @return created InetSocketAddress object
      */
-    public static InetSocketAddress createSocketAddress(String address) {
-        if (address == null) {
+    public static InetSocketAddress createSocketAddress(String address)
+    {
+        if (address == null)
+        {
             return null;
         }
 
@@ -254,21 +253,25 @@ public class Util {
         String[] parts = address.split(":");
 
         //split string contains ":"
-        if (parts.length == 2) {
-
-            //get and pre-process ip address string
+        if (parts.length == 2)
+        {
             String ip = parts[0];
 
-            if (ip.charAt(0) == '/') {
+            if (ip.charAt(0) == '/')
+            {
                 ip = ip.substring(1);
             }
 
             InetAddress ipAddress = null;
 
-            try {
+            try
+            {
                 ipAddress = InetAddress.getByName(ip);
-            } catch (UnknownHostException e) {
-                System.out.println("Cannot create ip address: " + ip);
+            }
+
+            catch (UnknownHostException e)
+            {
+                Logger.log("Cannot create ip address: " + ip);
                 return null;
             }
 
@@ -277,7 +280,8 @@ public class Util {
         }
 
         // split string does not contain ":"
-        else {
+        else
+        {
             return null;
         }
     }
@@ -303,7 +307,7 @@ public class Util {
         try {
             line = reader.readLine();
         } catch (IOException e) {
-            System.out.println("Cannot read line from input stream.");
+            Logger.log("Cannot read line from input stream.");
             return null;
         }
 
