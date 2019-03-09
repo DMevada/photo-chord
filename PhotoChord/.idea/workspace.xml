@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5760ecf-3c4e-4c19-a4ee-0a7e0d2f2de4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/Chord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Chord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/scu/Threads/FixFingerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Threads/FixFingerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/scu/Utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/scu/Utils/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/scu/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="148">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#13129#13130#0" expanded="true" />
                 <element signature="e#13159#13160#0" expanded="true" />
@@ -36,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            <state relative-caret-position="242">
+              <caret line="67" column="36" lean-forward="true" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -45,10 +41,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/scu/Utils/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="189" selection-start-line="189" selection-end-line="189" />
+            <state relative-caret-position="719">
+              <caret line="241" column="14" selection-start-line="241" selection-start-column="14" selection-end-line="241" selection-end-column="14" />
               <folding>
-                <element signature="e#3647#3648#0" expanded="true" />
+                <element signature="e#3700#3701#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,7 +170,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="edu.scu.Chord" />
       <module name="untitled104" />
-      <option name="PROGRAM_PARAMETERS" value="create 5432" />
+      <option name="PROGRAM_PARAMETERS" value="join 6891 172.21.68.114:4000" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -207,15 +203,16 @@
       <workItem from="1551837746327" duration="279000" />
       <workItem from="1551838155999" duration="7357000" />
       <workItem from="1552164621842" duration="1914000" />
-      <workItem from="1552166609782" duration="2836000" />
+      <workItem from="1552166609782" duration="5646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13993000" />
+    <option name="totallyTimeSpent" value="16803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -223,8 +220,8 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -258,6 +255,12 @@
           <line>37</line>
           <properties />
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/scu/Node.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/edu/scu/Node.java</url>
@@ -344,15 +347,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Chord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="242">
+          <caret line="67" column="36" lean-forward="true" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="148">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#13129#13130#0" expanded="true" />
             <element signature="e#13159#13160#0" expanded="true" />
@@ -362,10 +365,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/scu/Utils/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
+        <state relative-caret-position="719">
+          <caret line="241" column="14" selection-start-line="241" selection-start-column="14" selection-end-line="241" selection-end-column="14" />
           <folding>
-            <element signature="e#3647#3648#0" expanded="true" />
+            <element signature="e#3700#3701#0" expanded="true" />
           </folding>
         </state>
       </provider>

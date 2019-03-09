@@ -1,10 +1,8 @@
 package edu.scu.Utils;
 
 import java.io.*;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.HashMap;
 
 import static edu.scu.Utils.Constants.sizeOfFingerTable;
@@ -40,8 +38,10 @@ public class Util
     public static long hashSocketAddress(InetSocketAddress addr) {
         //int i = addr.hashCode();
         //return hashHashCode(i);
-
-        return Integer.parseInt(addr.getHostName().substring(addr.getHostName().lastIndexOf(".")+1)) % 32;
+        Logger.log(addr.getHostString());
+        String lastTriplet = addr.getHostString().substring(addr.getHostString().lastIndexOf(".")+1);
+        Logger.log(lastTriplet);
+        return Integer.parseInt(lastTriplet) % 32;
     }
 
     /**
@@ -182,11 +182,11 @@ public class Util
         // try to open talkSocket, output request to this socket
         // return null if fail to do so
         try {
-            talkSocket = new Socket(server.getAddress(), server.getPort());
+            talkSocket = new Socket(server.getHostString(), server.getPort());
             PrintStream output = new PrintStream(talkSocket.getOutputStream());
             output.println(req);
         } catch (IOException e) {
-            //Logger.log("\nCannot send request to "+server.toString()+"\nRequest is: "+req+"\n");
+            Logger.log("\nCannot send request to "+server.toString()+"\nRequest is: "+req+"\n");
             return null;
         }
 
@@ -221,46 +221,45 @@ public class Util
      *
      * @return created InetSocketAddress object
      */
-    public static InetSocketAddress createSocketAddress(String address)
+    public static InetSocketAddress createSocketAddress(String addr)
     {
-        if (address == null)
-        {
+        // input null, return null
+        if (addr == null) {
             return null;
         }
 
-        // split input
-        String[] parts = address.split(":");
+        // split input into ip string and port string
+        String[] splitted = addr.split(":");
 
-        //split string contains ":"
-        if (parts.length == 2)
-        {
-            String ip = parts[0];
+        // can split string
+        if (splitted.length >= 2) {
 
-            if (ip.charAt(0) == '/')
-            {
+            //get and pre-process ip address string
+            String ip = splitted[0];
+            if (ip.startsWith("/")) {
                 ip = ip.substring(1);
             }
+            //Logger.log(ip);
+            //parse ip address, if fail, return null
+//            InetAddress m_ip = null;
+//            try {
+//               // m_ip = InetAddress.getByName(ip);
+//            } catch (UnknownHostException e) {
+//                e.printStackTrace();
+//                System.out.println("Cannot create ip address: "+ip);
+//                return null;
+//            }
 
-            InetAddress ipAddress = null;
+            // parse port number
+            String port = splitted[1];
+            int m_port = Integer.parseInt(port);
 
-            try
-            {
-                ipAddress = InetAddress.getByName(ip);
-            }
-
-            catch (UnknownHostException e)
-            {
-                Logger.log("Cannot create ip address: " + ip);
-                return null;
-            }
-
-            int port = Integer.parseInt(parts[1]);
-            return new InetSocketAddress(ipAddress, port);
+            // combine ip addr and port in socket address
+            return new InetSocketAddress(ip, m_port);
         }
 
-        // split string does not contain ":"
-        else
-        {
+        // cannot split string
+        else {
             return null;
         }
     }
