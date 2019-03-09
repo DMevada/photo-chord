@@ -1,6 +1,7 @@
 package edu.scu;
 
 import edu.scu.Utils.Logger;
+import edu.scu.Utils.PersistentLogger;
 import edu.scu.Utils.Util;
 
 import java.net.InetAddress;
@@ -110,6 +111,8 @@ public class Chord
             {
                 //stop threads
                 Logger.log("");
+                node.stopAllThreads();
+                PersistentLogger.getInstance().logD("Logger stopped");
                 System.exit(0);
             }
         }
