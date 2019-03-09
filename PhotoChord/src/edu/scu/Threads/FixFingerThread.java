@@ -31,9 +31,8 @@ public class FixFingerThread extends Thread {
     @Override
     public void run() {
         while (alive) {
-            int i = random.nextInt(5 + 1);
-            if(i == 0) {
-                i += 1;
+            int i = random.nextInt(5);
+            if(i == 0) { i +=1 ;
             }
 //            Logger.log("Checking node #" + i);
             InetSocketAddress ithfinger = local.find_successor(Util.ithStart(local.getId(), i));

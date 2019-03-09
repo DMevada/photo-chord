@@ -105,6 +105,7 @@ public class Chord
             if (userCommand.equalsIgnoreCase("info"))
             {
                 node.printDataStructure();
+                node.printNeighbors();
             }
 
             else if (userCommand.equalsIgnoreCase("quit"))

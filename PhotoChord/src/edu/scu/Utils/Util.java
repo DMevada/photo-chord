@@ -25,7 +25,7 @@ public class Util
         //initialize power of two table
         powerOfTwo = new HashMap<Integer, Long>();
         long base = 1;
-        for (int i = 0; i <= sizeOfFingerTable; i++) {
+        for (int i = 0; i < sizeOfFingerTable +1; i++) {
             powerOfTwo.put(i, base);
             base *= 2;
         }
@@ -115,29 +115,6 @@ public class Util
         return ret;
     }
 
-    /**
-     * Compute a socket address' SHA-1 hash in hex
-     * and its approximate position in string
-     *
-     * @param addr
-     * @return
-     */
-    public static String hexIdAndPosition(InetSocketAddress addr) {
-        long hash = hashSocketAddress(addr);
-        return (longTo8DigitHex(hash) + " (" + hash * 100 / Util.getPowerOfTwo(sizeOfFingerTable) + "%)");
-    }
-
-
-    public static String longTo8DigitHex(long l) {
-        String hex = Long.toHexString(l);
-        int lack = 8 - hex.length();
-        StringBuilder sb = new StringBuilder();
-        for (int i = lack; i > 0; i--) {
-            sb.append("0");
-        }
-        sb.append(hex);
-        return sb.toString();
-    }
 
 
     public static long ithStart(long nodeid, int i) {

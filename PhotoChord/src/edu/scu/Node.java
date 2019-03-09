@@ -36,7 +36,7 @@ public class Node {
 
         // initialize an empty finger table
         finger = new HashMap<Integer, InetSocketAddress>();
-        for (int i = 1; i <= sizeOfFingerTable; i++)
+        for (int i = 0; i < sizeOfFingerTable; i++)
         {
             updateIthFinger(i, null);
         }
@@ -434,7 +434,7 @@ public class Node {
 
     public void printNeighbors() {
         Logger.log("\nYou are listening on port " + localAddress.getPort() + "."
-                + "\nYour position is " + Util.hexIdAndPosition(localAddress) + ".");
+                + "\nYour position is " + localAddress + ".");
         InetSocketAddress successor = finger.get(1);
 
         // if it cannot find both predecessor and successor
@@ -448,14 +448,14 @@ public class Node {
         else {
             if (predecessor != null) {
                 Logger.log("Your predecessor is node " + predecessor.getAddress().toString() + ", "
-                        + "port " + predecessor.getPort() + ", position " + Util.hexIdAndPosition(predecessor) + ".");
+                        + "port " + predecessor.getPort() + ", position " + predecessor + ".");
             } else {
                 Logger.log("Your predecessor is updating.");
             }
 
             if (successor != null) {
                 Logger.log("Your successor is node " + successor.getAddress().toString() + ", "
-                        + "port " + successor.getPort() + ", position " + Util.hexIdAndPosition(successor) + ".");
+                        + "port " + successor.getPort() + ", position " + successor + ".");
             } else {
                 Logger.log("Your successor is updating.");
             }
@@ -464,19 +464,19 @@ public class Node {
 
     public void printDataStructure() {
         Logger.log("\n==============================================================");
-        Logger.log("\nLOCAL:\t\t\t\t" + localAddress.toString() + "\t" + Util.hexIdAndPosition(localAddress));
+        Logger.log("\nLOCAL:\t\t\t\t" + localAddress.toString() + "\t" + (localAddress));
         if (predecessor != null)
-            Logger.log("\nPREDECESSOR:\t\t\t" + predecessor.toString() + "\t" + Util.hexIdAndPosition(predecessor));
+            Logger.log("\nPREDECESSOR:\t\t\t" + predecessor.toString() + "\t" + (predecessor));
         else
             Logger.log("\nPREDECESSOR:\t\t\tNULL");
         Logger.log("\nFINGER TABLE:\n");
-        for (int i = 1; i <= sizeOfFingerTable; i++) {
+        for (int i = 1; i < sizeOfFingerTable + 1; i++) {
             long ithstart = Util.ithStart(Util.hashSocketAddress(localAddress), i);
             InetSocketAddress f = finger.get(i);
             StringBuilder sb = new StringBuilder();
-            sb.append(i + "\t" + Util.longTo8DigitHex(ithstart) + "\t\t");
+            sb.append(i + "\t" + ithstart + "\t\t");
             if (f != null)
-                sb.append(f.toString() + "\t" + Util.hexIdAndPosition(f));
+                sb.append(f.toString() + "\t" + f);
 
             else
                 sb.append("NULL");
